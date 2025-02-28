@@ -3,42 +3,42 @@
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-gradient-to-br from-white via-purple-50/30 to-white"></div>
     <div class="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5"></div>
-    <div class="absolute top-20 -left-32 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 -right-32 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-20 -left-32 w-80 h-80 bg-primary/10 rounded-full filter blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 -right-32 w-80 h-80 bg-secondary/10 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
 
     <div class="container mx-auto px-4 relative">
       <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-fade-in-up">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-fade-in-up">
           Testimonials
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
       </div>
 
       <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div v-for="(testimonial, index) in testimonials" 
              :key="index"
              class="group">
-          <div class="bg-white/40 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/20 
-                    hover:shadow-xl transition-all duration-500 h-full relative overflow-hidden">
+          <div class="bg-white/40 backdrop-blur-lg rounded-xl p-4 shadow-md border border-white/20 
+                    hover:shadow-lg transition-all duration-500 h-full relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 
                       group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <!-- Quote Icon -->
-            <div class="text-primary/20 text-4xl mb-4">"</div>
+            <div class="text-primary/20 text-3xl mb-2">"</div>
             
             <!-- Testimonial Content -->
-            <p class="text-gray-700 mb-6 relative">{{ testimonial.content }}</p>
+            <p class="text-gray-700 text-sm mb-4 relative">{{ testimonial.content }}</p>
             
             <!-- Author Info -->
-            <div class="flex items-center space-x-4 relative">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold">
+            <div class="flex items-center space-x-3 relative">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white text-xs font-bold">
                 {{ getInitials(testimonial.name) }}
               </div>
               <div>
-                <h4 class="font-semibold text-gray-800">{{ testimonial.name }}</h4>
-                <p class="text-sm text-gray-600">{{ testimonial.role }}</p>
+                <h4 class="font-semibold text-gray-800 text-sm">{{ testimonial.name }}</h4>
+                <p class="text-xs text-gray-600">{{ testimonial.role }}</p>
               </div>
             </div>
           </div>

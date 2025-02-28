@@ -7,16 +7,17 @@
     </div>
 
     <div class="container mx-auto px-6 relative">
-      <h2 class="text-5xl font-bold text-center mb-5 bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-size-200 animate-gradient-x text-transparent bg-clip-text">
+      <!-- Reduce main heading font size from text-5xl to text-4xl -->
+      <h2 class="text-4xl font-bold text-center mb-5 bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-size-200 animate-gradient-x text-transparent bg-clip-text">
         Projects
       </h2>
 
-      <!-- Category Filter -->
-      <div class="flex justify-center flex-wrap gap-4 mb-16">
+      <!-- Category Filter - reduce padding and font size -->
+      <div class="flex justify-center flex-wrap gap-3 mb-12">
         <button v-for="category in categories"
                 :key="category"
                 @click="selectedCategory = category"
-                class="relative px-6 py-3 rounded-full transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group"
+                class="relative px-5 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group text-sm"
                 :class="[
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-lg'
@@ -40,29 +41,31 @@
           
           
           
-          <div class="p-8 space-y-6">
+          <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <h3 class="text-2xl font-semibold text-gray-800 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r transition-all duration-300"
+              <!-- Reduce project title from text-2xl to text-xl -->
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r transition-all duration-300"
                   :class="project.color">
                 {{ project.title }}
               </h3>
-              <span class="px-4 py-1 text-sm bg-gradient-to-r rounded-full text-white shadow-sm"
+              <!-- Reduce category badge padding and font size -->
+              <span class="px-3 py-0.5 text-xs bg-gradient-to-r rounded-full text-white shadow-sm"
                     :class="project.color">
                 {{ project.category }}
               </span>
             </div>
             
-            <p class="text-gray-600 dark:text-gray-400 line-clamp-4">{{ project.description }}</p>
+            <!-- Reduce description text size -->
+            <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-4">{{ project.description }}</p>
             
             <div class="flex flex-wrap gap-2">
+              <!-- Reduce technology tags padding and font size -->
               <span v-for="tech in project.technologies" 
                     :key="tech"
-                    class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700/50 text-gray-600 dark:text-gray-400 rounded-full backdrop-blur-sm">
+                    class="px-2 py-0.5 text-xs bg-gray-100 dark:bg-gray-700/50 text-gray-600 dark:text-gray-400 rounded-full backdrop-blur-sm">
                 {{ tech }}
               </span>
             </div>
-            
-            
           </div>
         </div>
       </div>

@@ -2,16 +2,16 @@
   <section id="contact" class="py-24 relative overflow-hidden">
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-72 h-72 bg-secondary/10 rounded-full filter blur-3xl"></div>
+    <div class="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-64 h-64 bg-secondary/10 rounded-full filter blur-3xl"></div>
 
     <div class="container mx-auto px-4 relative">
       <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-3xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Get in Touch
         </h2>
-        <p class="text-base-content/60 text-lg">
+        <p class="text-base-content/60 text-base">
           Feel free to reach out for collaboration opportunities, questions about my work, 
           or just to say hello. I'm always open to discussing new projects and ideas.
         </p>
@@ -19,16 +19,16 @@
 
       <!-- Contact Form -->
       <div class="max-w-xl mx-auto">
-        <div class="bg-base-100/50 backdrop-blur-sm p-7 rounded-2xl shadow-lg border border-base-200">
+        <div class="bg-base-100/50 backdrop-blur-sm p-6 rounded-xl shadow-md border border-base-200">
           <!-- Success Message -->
-          <div v-if="submitStatus === 'success'" class="alert alert-success mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <div v-if="submitStatus === 'success'" class="alert alert-success mb-4 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <span>Thank you! Your message has been sent successfully.</span>
           </div>
           
           <!-- Error Message -->
-          <div v-if="submitStatus === 'error'" class="alert alert-error mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <div v-if="submitStatus === 'error'" class="alert alert-error mb-4 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <span>{{ errorMessage || 'Failed to submit the form. Please try again later.' }}</span>
           </div>
           
@@ -40,18 +40,18 @@
             method="POST" 
             target="hidden-iframe" 
             @submit="handleFormSubmit"
-            class="space-y-5"
+            class="space-y-4"
           >
             <!-- Name Input -->
             <div class="form-control">
               <label class="label">
-                <span class="label-text font-medium">Name</span>
+                <span class="label-text text-sm font-medium">Name</span>
               </label>
               <input 
                 type="text" 
                 name="name"
                 v-model="formData.name"
-                class="input input-bordered w-full focus:input-primary transition-all duration-300"
+                class="input input-bordered w-full focus:input-primary transition-all duration-300 text-sm"
                 placeholder="Your name"
                 required
               />
@@ -60,13 +60,13 @@
             <!-- Email Input -->
             <div class="form-control">
               <label class="label">
-                <span class="label-text font-medium">Email</span>
+                <span class="label-text text-sm font-medium">Email</span>
               </label>
               <input 
                 type="email" 
                 name="email"
                 v-model="formData.email"
-                class="input input-bordered w-full focus:input-primary transition-all duration-300"
+                class="input input-bordered w-full focus:input-primary transition-all duration-300 text-sm"
                 placeholder="your.email@example.com"
                 required
               />
@@ -75,12 +75,12 @@
             <!-- Message Input -->
             <div class="form-control">
               <label class="label">
-                <span class="label-text font-medium">Message</span>
+                <span class="label-text text-sm font-medium">Message</span>
               </label>
               <textarea 
                 name="message"
                 v-model="formData.message"
-                class="textarea textarea-bordered h-32 focus:textarea-primary transition-all duration-300"
+                class="textarea textarea-bordered h-28 focus:textarea-primary transition-all duration-300 text-sm"
                 placeholder="Your message here..."
                 required
               ></textarea>
@@ -89,7 +89,7 @@
             <!-- Submit Button -->
             <button 
               type="submit"
-              class="btn btn-primary w-full bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/20 border-0 transition-all duration-300"
+              class="btn btn-primary w-full bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/20 border-0 transition-all duration-300 text-sm"
               :disabled="isSubmitting"
             >
               <span v-if="isSubmitting">

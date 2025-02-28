@@ -3,19 +3,19 @@
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-gradient-to-br from-white via-orange-50/30 to-white"></div>
     <div class="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5"></div>
-    <div class="absolute top-20 -left-32 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 -right-32 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-20 -left-32 w-80 h-80 bg-primary/10 rounded-full filter blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 -right-32 w-80 h-80 bg-secondary/10 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
 
     <div class="container mx-auto px-4 relative">
       <!-- Section Header -->
       <div class="text-center mb-8">
-        <h2 class="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent 
+        <h2 class="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent 
                    animate-fade-in-up">About Me</h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
       </div>
 
       <!-- Introduction -->
-      <div class="prose prose-lg mx-auto text-center max-w-4xl mb-10 relative">
+      <div class="prose prose-base mx-auto text-center max-w-4xl mb-8 relative">
         <!-- Decorative Elements -->
         <div class="absolute -left-4 top-1/2 w-6 h-6 bg-primary/10 rounded-full animate-float"></div>
         <div class="absolute -right-4 top-1/3 w-4 h-4 bg-secondary/10 rounded-full animate-float" style="animation-delay: 1s;"></div>
