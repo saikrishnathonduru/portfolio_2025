@@ -56,15 +56,15 @@ const testimonials = [
     role: "Tech Strategist at Kern AG"
   },
   {
-    content: "An outstanding professional who consistently delivers high-quality work. Their deep understanding of ML systems and attention to detail resulted in significant improvements to our data processing pipeline.",
+    content: "impressed by how quickly he grasped the requirements with minimal explanation—even though he was new to the field. His efficiency in gathering requirements, combined with his remarkable speed in delivering final solutions, made working with him a seamless experience. I have always enjoyed our collaboration and can highly recommend him both as a professional and as a person.",
     name: "Maren Zieger",
     role: "Head of Systems Engineering at KERN AG"
   },
-  {
-    content: "Exceptional problem-solving skills and technical expertise. They brought valuable insights to our AI implementation and helped us achieve our project goals ahead of schedule.",
-    name: "Thomas Kern",
-    role: "CTO at KERN AG"
-  }
+  // {
+  //   content: "Exceptional problem-solving skills and technical expertise. They brought valuable insights to our AI implementation and helped us achieve our project goals ahead of schedule.",
+  //   name: "Thomas Kern",
+  //   role: "CTO at KERN AG"
+  // }
 ];
 
 // Function to get first and last letter of a name
